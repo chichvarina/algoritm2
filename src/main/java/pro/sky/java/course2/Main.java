@@ -1,5 +1,6 @@
 package pro.sky.java.course2;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -7,8 +8,8 @@ public class Main {
         System.out.println("Все проверки теперь в тестах");
 
         Integer[] array1 = generateArray();
-        Integer[] array2 = generateArray();
-        Integer[] array3 = generateArray();
+        Integer[] array2 = Arrays.copyOf(array1, array1.length);
+        Integer[] array3 = Arrays.copyOf(array1, array1.length);
 
         Long time0 = System.currentTimeMillis();
         sortBubble(array1);
